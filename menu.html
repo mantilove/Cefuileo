@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>CEF Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Подключаем иконки FontAwesome для сайдбара -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div id="app" class="dashboard-window hidden">
+        <!-- Боковая панель (Sidebar) -->
+        <aside class="sidebar">
+            <div class="nav-btn active" onclick="switchTab(1)"><i class="fa-solid fa-house"></i></div>
+            <div class="nav-btn" onclick="switchTab(2)"><i class="fa-solid fa-credit-card"></i></div>
+            <div class="nav-btn" onclick="switchTab(3)"><i class="fa-solid fa-gear"></i></div>
+            <div class="nav-btn close-btn" onclick="closeMenu()"><i class="fa-solid fa-xmark"></i></div>
+        </aside>
+
+        <!-- Основная область -->
+        <main class="content">
+            <!-- Шапка -->
+            <header class="header">
+                <span class="title">МЕНЮ УПРАВЛЕНИЯ</span>
+                <button class="mint-btn" onclick="sendAction('action_click')">+ ДЕЙСТВИЕ</button>
+            </header>
+
+            <hr class="divider">
+
+            <!-- Вкладка 1: Карточки -->
+            <div id="tab-1" class="tab-content active">
+                <div class="card">
+                    <div class="card-left">
+                        <span class="tag">МАЙ 8</span>
+                        <div class="card-info">
+                            <h3>BUYERS LTD.</h3>
+                            <p>Информация или описание игрока</p>
+                        </div>
+                    </div>
+                    <div class="card-right">
+                        <span class="order-id">ID: 2267837</span>
+                        <span class="price">$541.98</span>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <div class="card-left">
+                        <span class="tag">МАЙ 8</span>
+                        <div class="card-info">
+                            <h3>PRODUCT CORP.</h3>
+                            <p>Дополнительная статистика</p>
+                        </div>
+                    </div>
+                    <div class="card-right">
+                        <span class="order-id">ID: 2267829</span>
+                        <span class="price">$896.40</span>
+                    </div>
+                </div>
+
+                <div class="balance-section">
+                    <span class="balance-title">ОБЩИЙ БАЛАНС СЧЕТА</span>
+                    <h1 class="balance-amount">$ 9,371.04</h1>
+                </div>
+            </div>
+
+            <!-- Вкладка 2 -->
+            <div id="tab-2" class="tab-content">
+                <h2>Функции скрипта</h2>
+                <p>Здесь можно разместить чекбоксы, слайдеры и любой функционал.</p>
+            </div>
+
+            <!-- Вкладка 3 -->
+            <div id="tab-3" class="tab-content">
+                <h2>Настройки</h2>
+                <p>Параметры и конфигурация скрипта.</p>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
